@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeepFunding Communities</title>
+    <meta name="description" content="Join the Future of Decentralized AI" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          container: {
+            center: true,
+            padding: '1.5rem',
+            screens: {
+              sm: '640px',
+              md: '768px',
+              lg: '1024px',
+              xl: '1280px',
+            },
+          },
+          extend: {
+            colors: {
+              deepViolet: '#1E1243', // Brand Dark
+              deepPurple: '#13072D', // Darker Accent
+              electricPurple: '#B620E0', // Primary Accent
+              skyBlue: '#32C6FF', // Secondary Accent
+              harvestGold: '#F3AB10', // Tertiary Accent
+              offWhite: '#F9FAFB', // Background
+              carrotOrange: '#FD9E39', 
+              cornflowerBlue: '#5B92F5'
+            },
+            fontFamily: {
+              sans: ['DM Sans', 'sans-serif'], // Primary Font
+              brand: ['Orbitron', 'sans-serif'], // Logo/Display Font
+            },
+            backgroundImage: {
+              'brand-gradient': 'linear-gradient(90deg, #F3AB10 0%, #B620E0 50%, #32C6FF 100%)',
+              'brand-gradient-hover': 'linear-gradient(90deg, #F3AB10 10%, #B620E0 60%, #32C6FF 110%)',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'float-delayed': 'float 6s ease-in-out 3s infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Design System Global Resets & Typography */
+      body {
+        font-family: 'DM Sans', sans-serif;
+        color: #1E1243;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+      }
+      
+      /* Smooth scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Typography System */
+      h1, h2, h3, h4, h5, h6 {
+        letter-spacing: -0.02em;
+      }
+
+      /* Custom Scrollbar */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+
+      /* --- MOTION SYSTEM --- */
+      
+      /* Base Reveal State (Hidden) */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+        will-change: opacity, transform;
+      }
+
+      /* Visible State */
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Stagger Delays */
+      .delay-100 { transition-delay: 100ms; }
+      .delay-200 { transition-delay: 200ms; }
+      .delay-300 { transition-delay: 300ms; }
+      .delay-400 { transition-delay: 400ms; }
+      .delay-500 { transition-delay: 500ms; }
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
